@@ -5,7 +5,7 @@ import AddedFeature from './AddedFeature';
 import { statement } from '@babel/template';
 
 const AddedFeatures = (props) => {
-  console.log(props)
+
   return (
     <div className="content">
       <h6>Added features:</h6>
