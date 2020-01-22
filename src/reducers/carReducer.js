@@ -15,7 +15,7 @@ export const initialState = {
     ]
   };
 
-  export const titleReducer = (state = initialState, action) => {
+  export const carReducer = (state = initialState, action) => {
       console.log(state, action)
     switch( action.type ) {
         default:

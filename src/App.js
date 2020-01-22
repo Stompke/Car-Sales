@@ -34,8 +34,8 @@ const App = () => {
   return (
     <div className="boxes">
       <div className="box">
-        <Header car={state.car} />
-        <AddedFeatures car={state.car} />
+        <Header  />
+        <AddedFeatures />
       </div>
       <div className="box">
         <AdditionalFeatures additionalFeatures={state.additionalFeatures} />
