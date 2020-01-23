@@ -1,7 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 
-import { removeFeature, logIt } from '../actions/featuresActions';
+import { removeFeature } from '../actions/featuresActions';
 
 import AddedFeature from './AddedFeature';
 import { statement } from '@babel/template';
@@ -21,7 +21,7 @@ const AddedFeatures = (props) => {
       ) : (
         <p>You can purchase items from the store.</p>
         )}
-        <button onClick={props.removeFeature}>test</button>
+
     </div>
   );
 };
@@ -36,5 +36,5 @@ const mapStateToProps = state => {
 
 export default connect(
   mapStateToProps,
-  {removeFeature, logIt}
+  {removeFeature}
 )(AddedFeatures);

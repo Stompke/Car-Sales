@@ -11,9 +11,3 @@ export const removeFeature = id => {
         payload: id
     }
 }
-
-export const logIt = () => {
-    return {
-        type: 'TEST'
-    }
-}
