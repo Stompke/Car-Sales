@@ -36,7 +36,7 @@ export const initialState = {
             console.log(state.car.features)
             return {
               ...state,
-              // additionalPrice: state.addiontalPrice - state.car.features.find(item => item.id === action.payload).price,
+              additionalPrice: state.additionalPrice - state.car.features.find(item => item.id === action.payload).price,
               car: {...state.car,
               features: [
               ...state.car.features.filter(item => item.id !== action.payload)
