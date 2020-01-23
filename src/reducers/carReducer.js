@@ -32,8 +32,11 @@ export const initialState = {
                 additionalFeatures: [...state.additionalFeatures.filter(item => item.id !== action.payload)]
             };
         case 'REMOVE_FEATURE':
-            console.log('add feature case')
+            console.log('remove feature case')
             return state;
+        case 'TEST':
+          console.log('it worked!')
+          return state;
         default:
             return state;
     }

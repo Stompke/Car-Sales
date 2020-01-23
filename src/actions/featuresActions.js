@@ -10,3 +10,9 @@ export const removeFeature = () => {
         type: 'REMOVE_FEATURE'
     }
 }
+
+export const logIt = () => {
+    return {
+        type: 'TEST'
+    }
+}
