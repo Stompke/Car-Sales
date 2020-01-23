@@ -32,8 +32,21 @@ export const initialState = {
                 additionalFeatures: [...state.additionalFeatures.filter(item => item.id !== action.payload)]
             };
         case 'REMOVE_FEATURE':
-            console.log('remove feature case')
-            return state;
+            console.log(action.payload)
+            console.log(state.car.features)
+            return {
+              ...state,
+              // additionalPrice: state.addiontalPrice - state.car.features.find(item => item.id === action.payload).price,
+              car: {...state.car,
+              features: [
+              ...state.car.features.filter(item => item.id !== action.payload)
+              ]
+              },
+              additionalFeatures: [
+                ...state.additionalFeatures,
+                state.car.features.find(item => item.id === action.payload)
+              ]
+            };
         case 'TEST':
           console.log('it worked!')
           return state;

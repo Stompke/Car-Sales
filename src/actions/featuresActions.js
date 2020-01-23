@@ -5,9 +5,10 @@ export const addFeature = id => {
     }
 }
 
-export const removeFeature = () => {
+export const removeFeature = id => {
     return {
-        type: 'REMOVE_FEATURE'
+        type: 'REMOVE_FEATURE',
+        payload: id
     }
 }
 
