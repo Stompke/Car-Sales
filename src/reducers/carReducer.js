@@ -22,13 +22,18 @@ export const initialState = {
             console.log('add feature case')
             return {
                 ...state,
+                additionalPrice: state.additionalPrice + state.additionalFeatures.find(item => item.id === action.payload).price,
                 car: {...state.car,
                     features: [
                     ...state.car.features,
                     state.additionalFeatures.find(item => item.id === action.payload)
-                    ]
-                  }
-            }
+                    ]  
+                  },
+                additionalFeatures: [...state.additionalFeatures.filter(item => item.id !== action.payload)]
+            };
+        case 'REMOVE_FEATURE':
+            console.log('add feature case')
+            return state;
         default:
             return state;
     }

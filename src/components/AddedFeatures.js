@@ -1,8 +1,11 @@
 import React from 'react';
 import { connect } from 'react-redux';
 
+import { removeFeature } from '../actions/featuresActions';
+
 import AddedFeature from './AddedFeature';
 import { statement } from '@babel/template';
+
 
 const AddedFeatures = (props) => {
 
@@ -12,7 +15,7 @@ const AddedFeatures = (props) => {
       {props.features.length ? (
         <ol type="1">
           {props.features.map(item => (
-            <AddedFeature key={item.id} feature={item} />
+            <AddedFeature removeFeature={props.removeFeature} key={item.id} feature={item} />
           ))}
         </ol>
       ) : (
@@ -31,5 +34,6 @@ const mapStateToProps = state => {
 }
 
 export default connect(
-  mapStateToProps
+  mapStateToProps,
+  {removeFeature}
 )(AddedFeatures);
