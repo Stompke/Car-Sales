@@ -66,7 +66,7 @@ Connect components 👉 Add events and event handlers in UI 👉 Build action cr
 write the reducer logic for the actions 👉 Rinse and repeat
 ```
 
-### []_MVP Requirements:_
+### [✅]_MVP Requirements:_
 
 - Move the given state to the reducer as the initial state for the Redux store.
 - Set up the Redux flow

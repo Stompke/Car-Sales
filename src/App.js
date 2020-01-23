@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import axios from 'axios';
 
 import Header from './components/Header';
 import AddedFeatures from './components/AddedFeatures';
@@ -7,6 +8,11 @@ import Total from './components/Total';
 
 const App = () => {
 
+
+  useEffect(() => {
+    axios
+    .get()
+  })
 
   // const removeFeature = item => {
   //   // dispatch an action here to remove an item
